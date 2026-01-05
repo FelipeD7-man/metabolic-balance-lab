@@ -1,0 +1,232 @@
+/* ================= RESET ================= */
+* {
+    box-sizing: border-box;
+}
+
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: #f4f6f5;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(90deg, #064e3b, #0f766e);
+    color: #ecfeff;
+    padding: 26px 0;
+}
+
+    header h1 {
+        margin: 0;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+/* ================= HERO ================= */
+.hero-brand {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    padding: 90px 0;
+}
+
+.brand-pill {
+    display: inline-block;
+    background: linear-gradient(90deg, #14b8a6, #2563eb);
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.hero-brand h1 {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-brand p {
+    font-size: 19px;
+    max-width: 520px;
+    color: #334155;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 26px;
+    box-shadow: 0 40px 90px rgba(0,0,0,0.35);
+    border: 6px solid #ffffff;
+}
+
+/* ================= CTA ================= */
+.cta {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 18px 46px;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 0 20px 40px rgba(249,115,22,0.45);
+    transition: all 0.3s ease;
+}
+
+    .cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 30px 60px rgba(249,115,22,0.6);
+    }
+
+/* ================= BRAND BLOCKS ================= */
+.brand-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 100px 0;
+}
+
+.brand-box {
+    background: #ffffff;
+    padding: 44px;
+    border-radius: 22px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    border-top: 6px solid #14b8a6;
+}
+
+    .brand-box h3 {
+        margin-top: 0;
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .brand-box p {
+        color: #475569;
+    }
+
+/* ================= ARTICLE ================= */
+.article {
+    max-width: 860px;
+    margin: auto;
+    padding: 40px 0 80px;
+}
+
+    .article p {
+        font-size: 18px;
+        margin-bottom: 26px;
+        color: #334155;
+    }
+
+/* ================= SPLIT ================= */
+.article-split {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 50px;
+    margin: 80px 0;
+    align-items: center;
+}
+
+    .article-split h3 {
+        font-size: 30px;
+        margin-bottom: 14px;
+    }
+
+    .article-split img {
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+
+/* ================= HIGHLIGHT ================= */
+.highlight {
+    background: linear-gradient(135deg, #ecfeff, #f0fdfa);
+    border-left: 6px solid #14b8a6;
+    padding: 36px 40px;
+    margin: 80px 0;
+    border-radius: 16px;
+    font-size: 18px;
+    color: #134e4a;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+    background: #020617;
+    color: #cbd5f5;
+    padding: 90px 30px 40px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.site-footer h4 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.site-footer p,
+.site-footer li {
+    font-size: 15px;
+    color: #94a3b8;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.site-footer li {
+    margin-bottom: 10px;
+}
+
+.site-footer a {
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+
+    .hero-brand,
+    .brand-blocks,
+    .article-split,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+        .hero-brand h1 {
+            font-size: 32px;
+        }
+
+    .hero-visual img {
+        height: 320px;
+    }
+}
