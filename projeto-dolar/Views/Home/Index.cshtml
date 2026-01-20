@@ -1,74 +1,221 @@
-﻿@{
-    Layout = "_Layout";
+@{
+    ViewData["Title"] = "Metabolic Support | Healthy Balance Lab";
+    Layout = null;
 }
 
-<section class="hero-brand container">
-    <div>
-        <span class="brand-pill">Metabolic Wellness Formula</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
 
-        <h1>
-            A New Generation of Metabolic Support
-            Designed for Modern Life
-        </h1>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f9f8;
+            color: #2e2e2e;
+        }
 
-        <p>
-            A science-driven approach focused on daily routines,
-            balance and long-term metabolic support.
-        </p>
+        header {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("/images/hero-mitolyn.jpg") center/cover no-repeat;
+            padding: 90px 20px;
+            text-align: center;
+            color: #fff;
+        }
 
-        <a class="cta" href="/Home/HowItWorks">
-            Explore How It Works
-        </a>
-    </div>
+        header h1 {
+            font-size: 38px;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
 
-    <div class="hero-visual">
-        <img src="~/images/hero-woman.jpg"
-             alt="Healthy confident woman lifestyle" />
-    </div>
-</section>
+        header p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
 
-<section class="brand-blocks container">
-    <div class="brand-box">
-        <h3>Science-Driven</h3>
-        <p>Built around metabolic research and biological rhythms.</p>
-    </div>
+        .cta {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+        }
 
-    <div class="brand-box">
-        <h3>Daily Integration</h3>
-        <p>Designed to fit naturally into everyday routines.</p>
-    </div>
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-    <div class="brand-box">
-        <h3>Long-Term Focus</h3>
-        <p>Support created for consistency, not quick fixes.</p>
-    </div>
-</section>
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
 
-<section class="article">
+        .text-center {
+            text-align: center;
+        }
+
+        .problem p {
+            font-size: 17px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .product {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .product p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .benefits li {
+            padding: 10px 0;
+            font-size: 16px;
+        }
+
+        .testimonials {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 40px 20px;
+        }
+
+        .testimonial {
+            max-width: 800px;
+            margin: 20px auto;
+            font-style: italic;
+        }
+
+        .final {
+            background-color: #e8f5e9;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media(max-width: 768px) {
+            .product {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Support Your Metabolism Naturally After 30</h1>
     <p>
-        Metabolism is not only influenced by what we eat, but also by
-        how and when we introduce supportive habits into daily life.
+        A simple daily supplement designed to help support metabolic balance,
+        energy, and healthy weight management — without extreme diets.
     </p>
+    <a href="#offer" class="cta">Learn How It Works</a>
+</header>
 
-    <div class="article-split">
-        <div>
-            <h3>Why Mornings Matter More After 35</h3>
-            <p>
-                As metabolic efficiency naturally changes with age,
-                structured routines become increasingly important.
-            </p>
-        </div>
+<section class="problem">
+    <h2>Why Metabolism Slows Down</h2>
+    <p>
+        Many women struggle with low energy, stubborn weight, and bloating —
+        even when eating healthy and staying active.
+        <br /><br />
+        Stress, age, and modern routines can quietly impact how your metabolism works,
+        making it harder for your body to burn calories efficiently.
+    </p>
+</section>
 
-        <img src="~/images/lifestyle-woman.jpg"
-             alt="Healthy lifestyle woman at home" />
+<section class="product">
+    <img src="/images/mitolyn-bottle.png" alt="Mitolyn supplement bottle" />
+
+    <div>
+        <h2>Meet Mitolyn</h2>
+        <p>
+            Mitolyn is a natural metabolic support supplement formulated to work with your body —
+            not against it.
+        </p>
+        <p>
+            It was created to help support daily energy, metabolic balance, and overall wellness
+            using carefully selected ingredients.
+        </p>
+    </div>
+</section>
+
+<section class="benefits">
+    <h2>How Mitolyn Supports Your Body</h2>
+    <ul>
+        <li>✔ Supports metabolic processes naturally</li>
+        <li>✔ Helps improve daily energy levels</li>
+        <li>✔ Easy to include in your daily routine</li>
+        <li>✔ Designed for long-term balance</li>
+    </ul>
+</section>
+
+<section class="testimonials">
+    <h2>What People Are Saying</h2>
+
+    <div class="testimonial">
+        ⭐⭐⭐⭐⭐ “I feel more energized and less bloated. It finally fits my routine.”
+        <br />— Helen P.
     </div>
 
-    <div class="highlight">
-        Researchers are exploring how specific plant-based compounds,
-        used consistently, may support metabolic balance.
+    <div class="testimonial">
+        ⭐⭐⭐⭐⭐ “A simple daily habit that made a real difference for me.”
+        <br />— Nicholas D.
     </div>
+</section>
 
-    <a class="cta" href="/Home/HowItWorks">
-        Continue Reading
+<section id="offer" class="final">
+    <h2>Ready to Support Your Metabolism?</h2>
+    <p>
+        Learn how Mitolyn works and see the full official presentation.
+    </p>
+    <a href="https://mitolyn.com/welcome/?hop=felipedia" class="cta">
+        View Official Mitolyn Page
     </a>
 </section>
+
+<footer>
+    This site is not the official Mitolyn website. This page is for informational purposes only.
+    <br />
+    Results may vary. Always consult a healthcare professional before starting any supplement.
+</footer>
+
+</body>
+</html>
