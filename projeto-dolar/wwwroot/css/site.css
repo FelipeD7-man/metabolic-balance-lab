@@ -1,73 +1,117 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+* {
     margin: 0;
-    background: #f8f9fb;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color: #0b5ed7;
+    color: #ffffff;
+}
+
+/* HERO */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px;
-    gap: 40px;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #0b5ed7, #0a58ca);
 }
 
-.hero img {
-    max-width: 420px;
-    border-radius: 12px;
+.hero-content {
+    max-width: 520px;
 }
 
-h1 {
-    font-size: 42px;
+.hero h1 {
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
-.btn-primary, .btn-secondary {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 28px;
-    background: #ff6a3d;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.95;
 }
 
-.benefits {
+.cta-button {
+    display: inline-block;
+    background-color: #e5533d;
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #d64530;
+    transform: scale(1.05);
+}
+
+.ratings {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffdd57;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+    width: 320px;
+}
+
+/* WHY SECTION */
+.why {
+    background-color: #ffffff;
+    color: #222;
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.why h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.feature {
+    max-width: 260px;
+    font-size: 16px;
+}
+
+/* IMAGE SECTION */
+.image-section {
+    background-color: #f4f6f9;
     padding: 60px;
     text-align: center;
 }
 
-.benefit-grid {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.benefit {
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    max-width: 260px;
-}
-
-.image-section {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
-}
-
 .image-section img {
-    max-width: 320px;
+    max-width: 600px;
+    width: 100%;
     border-radius: 12px;
 }
 
-.cta {
-    background: #ff6a3d;
-    color: #fff;
+/* FINAL CTA */
+.final-cta {
+    background: linear-gradient(135deg, #0a58ca, #084298);
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
+}
+
+.final-cta h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
 }
