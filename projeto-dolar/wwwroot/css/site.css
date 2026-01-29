@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +11,12 @@ html {
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f7fb;
+    background: #eef3f9;
     color: #243447;
     line-height: 1.6;
 }
 
 /* ================= NAVBAR ================= */
-
 .navbar {
     position: sticky;
     top: 0;
@@ -41,7 +40,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
 }
 
 .nav-menu a {
@@ -56,19 +55,14 @@ body {
 
 .nav-cta {
     background: #ff7a28;
-    padding: 10px 20px;
+    padding: 10px 22px;
     border-radius: 30px;
     font-weight: 700;
     color: #fff !important;
     box-shadow: 0 6px 15px rgba(255,122,40,0.4);
 }
 
-.nav-cta:hover {
-    transform: scale(1.05);
-}
-
 /* ================= HERO ================= */
-
 .hero {
     background: linear-gradient(135deg, #1b6fd1, #5fb0ff);
     padding: 90px 60px;
@@ -90,36 +84,52 @@ body {
     max-width: 520px;
 }
 
-.btn-primary {
-    display: inline-block;
-    background: #ff7a28;
-    color: #fff;
-    padding: 14px 30px;
-    border-radius: 40px;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(255,122,40,0.4);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-}
-
 .hero-image img {
     width: 100%;
     border-radius: 22px;
-    border: 6px solid rgba(255,255,255,0.4);
+    border: 6px solid rgba(255,255,255,0.35);
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
 
-/* ================= WHY ================= */
+/* ================= BUTTONS ================= */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-weight: 700;
+    text-decoration: none;
+}
 
-.why {
+.btn-primary {
+    background: #ff7a28;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(255,122,40,0.45);
+}
+
+.btn-secondary {
+    background: #1b6fd1;
+    color: #fff;
+}
+
+/* ================= SECTIONS (PADRÃO) ================= */
+.section {
     padding: 80px 60px;
-    background: linear-gradient(180deg, #f4f7fb, #e9f1fb);
+}
+
+.section-light {
+    background: #f7faff;
+}
+
+.section-soft {
+    background: #eef3f9;
+}
+
+.section-center {
     text-align: center;
 }
 
+/* ================= WHY ================= */
 .why h2 {
     font-size: 32px;
     margin-bottom: 50px;
@@ -129,7 +139,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
-    margin-bottom: 40px;
 }
 
 .why-card {
@@ -145,32 +154,12 @@ body {
     margin-bottom: 10px;
 }
 
-.btn-secondary {
-    display: inline-block;
-    background: #1b6fd1;
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
 /* ================= SUPPORT ================= */
-
 .support {
-    padding: 90px 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    background: #eef3f9;
-}
-
-.support-image img {
-    width: 100%;
-    border-radius: 22px;
-    border: 5px solid #ffffff;
-    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
 }
 
 .support-text h2 {
@@ -179,19 +168,22 @@ body {
 }
 
 .support-text p {
-    font-size: 16px;
     max-width: 520px;
 }
 
-/* ================= PRODUCT ================= */
+.support-image img {
+    width: 100%;
+    border-radius: 22px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
 
+/* ================= PRODUCT ================= */
 .product {
-    padding: 90px 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    background: linear-gradient(180deg, #ffffff, #f1f6fb);
 }
 
 .product-image img {
@@ -209,27 +201,29 @@ body {
     margin-bottom: 20px;
 }
 
-.product-text p {
-    font-size: 16px;
-    max-width: 520px;
+/* ================= IMAGE BLOCKS ================= */
+.image-block img {
+    width: 100%;
+    border-radius: 24px;
+    border: 5px solid rgba(255,255,255,0.7);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.18);
 }
 
 /* ================= FINAL CTA ================= */
-
 .final-cta {
-    padding: 90px 60px;
-    text-align: center;
     background: linear-gradient(135deg, #133b6f, #1b6fd1);
     color: #fff;
+    padding: 90px 60px;
+    text-align: center;
 }
 
 .final-cta img {
     width: 140px;
     height: 140px;
     border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.6);
     object-fit: cover;
     margin-bottom: 25px;
-    border: 5px solid rgba(255,255,255,0.6);
 }
 
 .final-cta h2 {
@@ -238,12 +232,10 @@ body {
 }
 
 .final-cta p {
-    font-size: 16px;
     margin-bottom: 30px;
 }
 
 /* ================= FOOTER ================= */
-
 .footer {
     background: #0d2a4d;
     color: #cfdff1;
@@ -253,7 +245,6 @@ body {
 }
 
 /* ================= RESPONSIVE ================= */
-
 @media (max-width: 900px) {
     .hero,
     .support,
