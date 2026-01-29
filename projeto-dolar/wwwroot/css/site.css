@@ -1,261 +1,121 @@
-/* ================= RESET ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ===============================
+   RESPONSIVIDADE – MOBILE FIRST
+   NÃO ALTERA DESKTOP
+================================ */
 
-html {
-    scroll-behavior: smooth;
-}
+/* Tablets e celulares */
+@media (max-width: 1024px) {
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #eef3f9;
-    color: #243447;
-    line-height: 1.6;
-}
+  body {
+    overflow-x: hidden;
+  }
 
-/* ================= NAVBAR ================= */
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: linear-gradient(90deg, #0f5ea8, #2f8edc);
-    padding: 16px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
+  /* Containers principais */
+  .container,
+  .section,
+  .content,
+  .wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
-.nav-logo {
-    font-size: 22px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: 1px;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.nav-menu a {
-    color: #e9f4ff;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.nav-menu a:hover {
-    text-decoration: underline;
-}
-
-.nav-cta {
-    background: #ff7a28;
-    padding: 10px 22px;
-    border-radius: 30px;
-    font-weight: 700;
-    color: #fff !important;
-    box-shadow: 0 6px 15px rgba(255,122,40,0.4);
-}
-
-/* ================= HERO ================= */
-.hero {
-    background: linear-gradient(135deg, #1b6fd1, #5fb0ff);
-    padding: 90px 60px;
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    color: #fff;
-}
-
-.hero-text h1 {
-    font-size: 44px;
-    margin-bottom: 20px;
-}
-
-.hero-text p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 520px;
-}
-
-.hero-image img {
-    width: 100%;
-    border-radius: 22px;
-    border: 6px solid rgba(255,255,255,0.35);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-
-/* ================= BUTTONS ================= */
-.btn-primary,
-.btn-secondary {
-    display: inline-block;
-    padding: 14px 32px;
-    border-radius: 40px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.btn-primary {
-    background: #ff7a28;
-    color: #fff;
-    box-shadow: 0 8px 20px rgba(255,122,40,0.45);
-}
-
-.btn-secondary {
-    background: #1b6fd1;
-    color: #fff;
-}
-
-/* ================= SECTIONS (PADRÃO) ================= */
-.section {
-    padding: 80px 60px;
-}
-
-.section-light {
-    background: #f7faff;
-}
-
-.section-soft {
-    background: #eef3f9;
-}
-
-.section-center {
+  /* HERO */
+  .hero {
+    flex-direction: column;
     text-align: center;
-}
+    gap: 24px;
+  }
 
-/* ================= WHY ================= */
-.why h2 {
-    font-size: 32px;
-    margin-bottom: 50px;
-}
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
-}
-
-.why-card {
-    background: #ffffff;
-    padding: 30px;
+  .hero img {
+    max-width: 100%;
+    height: auto;
     border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  /* Botões */
+  button,
+  .btn,
+  .cta-button,
+  a.button {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+
+  /* Seções lado a lado viram coluna */
+  .grid,
+  .features,
+  .benefits,
+  .columns,
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Cards */
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Imagens gerais */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Navbar */
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  /* Títulos */
+  h1 {
+    font-size: clamp(26px, 6vw, 36px);
+  }
+
+  h2 {
+    font-size: clamp(22px, 5vw, 30px);
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
     font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
-.why-card strong {
-    display: block;
-    margin-bottom: 10px;
-}
+/* Celulares pequenos */
+@media (max-width: 600px) {
 
-/* ================= SUPPORT ================= */
-.support {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
-.support-text h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
+  .hero {
+    padding-top: 40px;
+  }
 
-.support-text p {
-    max-width: 520px;
-}
+  .hero img {
+    border-radius: 16px;
+  }
 
-.support-image img {
-    width: 100%;
-    border-radius: 22px;
-    border: 5px solid #ffffff;
-    box-shadow: 0 18px 35px rgba(0,0,0,0.18);
-}
-
-/* ================= PRODUCT ================= */
-.product {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.product-image img {
-    width: 100%;
-    max-width: 420px;
-    margin: auto;
-    display: block;
-    border-radius: 26px;
-    border: 6px solid #e8f2ff;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.product-text h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-/* ================= IMAGE BLOCKS ================= */
-.image-block img {
-    width: 100%;
-    border-radius: 24px;
-    border: 5px solid rgba(255,255,255,0.7);
-    box-shadow: 0 16px 35px rgba(0,0,0,0.18);
-}
-
-/* ================= FINAL CTA ================= */
-.final-cta {
-    background: linear-gradient(135deg, #133b6f, #1b6fd1);
-    color: #fff;
-    padding: 90px 60px;
-    text-align: center;
-}
-
-.final-cta img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.6);
-    object-fit: cover;
-    margin-bottom: 25px;
-}
-
-.final-cta h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.final-cta p {
-    margin-bottom: 30px;
-}
-
-/* ================= FOOTER ================= */
-.footer {
-    background: #0d2a4d;
-    color: #cfdff1;
-    padding: 30px;
+  footer {
     text-align: center;
     font-size: 13px;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-    .hero,
-    .support,
-    .product {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-    }
+    padding: 24px 16px;
+  }
 }
